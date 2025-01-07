@@ -1,0 +1,72 @@
+
+
+#=================================================================================================
+#    Electromagnetic  processes : physics list standard option 3 (issue de egammaStandardPhys.mac)
+#=================================================================================================
+/gate/physics/addPhysicsList 		emstandard_opt1
+/gate/physics/addProcess PhotoElectric
+/gate/physics/processes/PhotoElectric/setModel StandardModel
+
+/gate/physics/addProcess Compton
+/gate/physics/processes/Compton/setModel StandardModel
+
+/gate/physics/addProcess RayleighScattering
+/gate/physics/processes/RayleighScattering/setModel PenelopeModel
+
+/gate/physics/addProcess ElectronIonisation
+/gate/physics/processes/ElectronIonisation/setModel StandardModel e-
+/gate/physics/processes/ElectronIonisation/setModel StandardModel e+
+
+/gate/physics/addProcess Bremsstrahlung e-
+/gate/physics/addProcess Bremsstrahlung e+
+/gate/physics/processes/Bremsstrahlung/setModel StandardModel e-
+/gate/physics/processes/Bremsstrahlung/setModel StandardModel e+
+
+/gate/physics/addProcess PositronAnnihilation e+
+
+/gate/physics/addProcess eMultipleScattering e+
+/gate/physics/addProcess eMultipleScattering e-
+
+#=================================================================================================
+# Additional processes not included in the list option 3
+#=================================================================================================
+
+#pair production
+/gate/physics/addProcess GammaConversion
+/gate/physics/processes/GammaConversion/setModel StandardModel
+
+#==================================================================================================
+# customized CUTS 
+#==================================================================================================
+
+
+#/gate/physics/Gamma/SetCutInRegion      world 0.0824 mm
+#/gate/physics/Electron/SetCutInRegion   world 0.0023 mm
+#/gate/physics/Positron/SetCutInRegion   world 0.0023 mm
+
+#/gate/physics/Gamma/SetCutInRegion      mouse 0.0824 mm
+#/gate/physics/Electron/SetCutInRegion   mouse 0.00224 mm
+#/gate/physics/Positron/SetCutInRegion   mouse 0.00224 mm
+
+#1/20 of dosel size
+/gate/physics/processes/ElectronIonisation/setStepFunction e+ 0.1 0.005 mm
+/gate/physics/processes/ElectronIonisation/setStepFunction e- 0.1 0.005 mm
+
+
+/gate/physics/displayCuts
+
+
+/gate/physics/setEMin 0.1 keV
+/gate/physics/setEMax 10 GeV
+
+/gate/physics/setDEDXBinning 220 $ pouvoir d'arret
+/gate/physics/setLambdaBinning 220 $ mean free path
+
+#===================================================================================================
+#additional features
+#===================================================================================================
+
+
+/gate/physics/processes/eMultipleScattering/setGeometricalStepLimiterType e- distanceToBoundary
+/gate/physics/processes/eMultipleScattering/setGeometricalStepLimiterType e+ distanceToBoundary
+

@@ -1,0 +1,21 @@
+#   SOURCE
+
+/gate/source/addSource GammaSource
+/gate/source/GammaSource/gps/particle gamma
+/gate/source/GammaSource/setActivity 1000 becquerel
+/gate/source/GammaSource/gps/energytype Mono
+/gate/source/GammaSource/gps/monoenergy 140. keV
+
+/gate/source/GammaSource/gps/angtype iso
+/gate/source/GammaSource/gps/mintheta 0. deg
+/gate/source/GammaSource/gps/maxtheta 180. deg
+/gate/source/GammaSource/gps/minphi 0. deg
+/gate/source/GammaSource/gps/maxphi 360. deg
+
+/gate/source/GammaSource/gps/shape Sphere
+/gate/source/GammaSource/gps/radius 0.5 mm
+
+/gate/source/GammaSource/gps/centre 0. 0. 0. mm
+
+/gate/source/GammaSource/attachTo cube1
+#/gate/source/lisut

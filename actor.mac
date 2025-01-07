@@ -1,0 +1,43 @@
+# Detectors
+
+/gate/actor/addActor DoseActor DoseDistribution
+/gate/actor/DoseDistribution/attachTo    	   cube1
+/gate/actor/DoseDistribution/stepHitType           random
+/gate/actor/DoseDistribution/setPosition           0. 0. 0. mm
+#/gate/actor/DoseDistribution/setResolution         134 501 127
+#/gate/actor/DoseDistribution/setResolution         111 111 76
+#/gate/actor/DoseDistribution/setResolution         56 56 38
+/gate/actor/DoseDistribution/setResolution         32 32 32
+
+
+/gate/actor/DoseDistribution/enableEdep             true
+/gate/actor/DoseDistribution/enableUncertaintyEdep  false
+/gate/actor/DoseDistribution/enableSquaredEdep     false
+/gate/actor/DoseDistribution/enableDose             true
+/gate/actor/DoseDistribution/enableUncertaintyDose  false
+/gate/actor/DoseDistribution/enableSquaredDose      false
+/gate/actor/DoseDistribution/enableNumberOfHits     false
+/gate/actor/DoseDistribution/save    DoseDistribution.hdr
+/gate/actor/DoseDistribution/save    DoseDistribution.hdr
+#/gate/actor/DoseDistribution/save    DoseDistribution.root
+#/gate/actor/DoseDistribution/save    DoseDistribution.mhd
+
+#/gate/actor/DoseDistribution/save    Dosedistribution.txt
+/gate/actor/addActor               SimulationStatisticActor stat
+/gate/actor/stat/save             stat-cube.txt
+
+
+
+
+## By default, all outputs are disabled, so do not forget to define some
+
+# Generic ROOT output
+#/gate/output/root/enable
+#/gate/output/root/setFileName 
+#/gate/output/root/setRootHitFlag 0
+#/gate/output/root/setRootSinglesFlag 1
+#/gate/output/root/setRootNtupleFlag 0
+#/gate/output/verbose 1
+
+
+

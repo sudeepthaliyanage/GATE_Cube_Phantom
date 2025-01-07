@@ -1,0 +1,26 @@
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+# World
+/gate/world/geometry/setXLength 50 cm
+/gate/world/geometry/setYLength 50 cm
+/gate/world/geometry/setZLength 50 cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible 1
+/gate/world/vis/forceWireframe
+
+# cube1
+/gate/world/daughters/name cube1
+/gate/world/daughters/insert box
+/gate/cube1/setMaterial Lead
+/gate/cube1/geometry/setXLength 32 mm
+/gate/cube1/geometry/setYLength 32 mm
+/gate/cube1/geometry/setZLength 32 mm
+/gate/cube1/placement/setTranslation 0. 0. 0. mm
+
+
+/gate/cube1/vis/forceSolid
+/gate/cube1/vis/setColor red
+
+/gate/cube1/attachPhantomSD
+
+

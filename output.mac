@@ -1,0 +1,8 @@
+#output
+
+#/gate/output/root/enable
+#/gate/output/root/setFileName DoseDistribution.root 
+/gate/output/root/setRootHitFlag 0
+/gate/output/root/setRootSinglesFlag 1
+/gate/output/root/setRootCoincidencesFlag 1
+
