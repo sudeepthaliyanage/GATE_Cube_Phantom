@@ -17,7 +17,7 @@
 /gate/actor/DoseDistribution/enableUncertaintyDose  false
 /gate/actor/DoseDistribution/enableSquaredDose      false
 /gate/actor/DoseDistribution/enableNumberOfHits     false
-/gate/actor/DoseDistribution/save    SPEBT_${SLURM_ARRAY_TASK_ID}.hdr
+/gate/actor/DoseDistribution/save    SPEBT_3.hdr
 
 
 #/gate/actor/DoseDistribution/save    DoseDistribution.hdr

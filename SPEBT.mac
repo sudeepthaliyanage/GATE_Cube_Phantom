@@ -1,0 +1,63 @@
+
+/control/execute  verbose.mac
+
+#=====================================================
+# GEOMETRY
+#=====================================================
+/control/execute  geometry.mac
+
+#=====================================================
+# PHYSICS
+#=====================================================
+
+/control/execute  physic.mac
+
+#=====================================================
+# DETECTORS
+#=====================================================
+
+/control/execute output.mac
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+
+/gate/run/initialize
+
+
+
+#=====================================================
+# SOURCE :
+#=====================================================
+
+#/control/execute    source.mac
+/control/execute    source.mac
+
+
+#=====================================================
+# VISUALISATION
+#=====================================================
+/vis/disable
+#/control/execute  visu.mac
+
+#=====================================================
+# RANDOM
+#=====================================================
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed 1234567890
+
+#=====================================================
+# START
+#=====================================================
+
+
+/gate/application/noGlobalOutput
+
+# Acquisition
+
+
+
+#/gate/application/setTimeSlice 10. s
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop 0.1 s
+/gate/application/startDAQ
